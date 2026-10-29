@@ -1,0 +1,21 @@
+const { launch, open, sleep, mkT } = require('./lib');
+const T = mkT('HIGHLIGHTS ARE A READ-MODE TOOL');
+(async () => {
+  const { browser, page, errors } = await launch({});
+  await open(page, '/unit/g11u5/reading?m=read');
+  await page.locator('[data-tool="pen"]').click();
+  await page.locator('.rd-passage .rd-s').nth(2).click();
+  await page.locator('.rd-passage .rd-s').nth(5).click();
+  await sleep(300);
+  T.eq('read: two highlighted', await page.locator('.rd-s.rd-hl').count(), 2);
+  await page.evaluate(() => { location.hash = '#/unit/g11u5/reading?m=listen'; }); await sleep(350);
+  T.eq('listen: highlights not painted (they would clash with the karaoke colours)', await page.locator('.rd-hl').count(), 0);
+  await page.evaluate(() => { location.hash = '#/unit/g11u5/reading?m=story'; }); await sleep(350);
+  T.eq('story: not painted', await page.locator('.rd-hl').count(), 0);
+  await page.evaluate(() => { location.hash = '#/unit/g11u5/reading?m=read'; }); await sleep(350);
+  T.eq('read again: still two (nothing lost)', await page.locator('.rd-s.rd-hl').count(), 2);
+  await page.emulateMedia({ media: 'print' });
+  T.eq('print block still carries the highlights', await page.locator('.rd-print .rd-pr-hl').count(), 2);
+  T.eq('errors', errors, []);
+  const ok = T.done([]); await browser.close(); process.exit(ok ? 0 : 1);
+})().catch(e => { console.error('CRASH', e); process.exit(2); });

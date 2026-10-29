@@ -1,0 +1,121 @@
+{
+  "id": "/tafawuq/",
+  "name": "تفوّق – إنجليزي الثانوي",
+  "short_name": "تفوّق",
+  "description": "شرح ومفردات وتمارين وامتحانات محاكاة لمنهاج اللغة الإنجليزية للصفين الحادي عشر والثاني عشر في الأردن. يعمل دون إنترنت.",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#F5F6FA",
+  "theme_color": "#2B3A9E",
+  "categories": [
+    "education"
+  ],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "الجولة السريعة",
+      "short_name": "جولة سريعة",
+      "url": "./#/speed",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "مراجعة البطاقات",
+      "short_name": "مراجعة",
+      "url": "./#/review",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "امتحان محاكاة",
+      "short_name": "امتحان",
+      "url": "./#/exam",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "prefer_related_applications": false,
+  "display_override": [
+    "standalone",
+    "minimal-ui"
+  ],
+  "screenshots": [
+    {
+      "src": "screenshots/wide-1-home.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "الرئيسية: هدف اليوم والتقدم والخطوة التالية"
+    },
+    {
+      "src": "screenshots/wide-2-reading.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "قطع القراءة: بطاقات لكل فقرة مع مفردات وفكرة رئيسية"
+    },
+    {
+      "src": "screenshots/wide-3-exam.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "امتحان محاكاة بنمط الامتحان الوزاري"
+    },
+    {
+      "src": "screenshots/narrow-1-home.png",
+      "sizes": "540x960",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "الرئيسية على الهاتف"
+    },
+    {
+      "src": "screenshots/narrow-2-reading.png",
+      "sizes": "540x960",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "قطعة قراءة على الهاتف"
+    },
+    {
+      "src": "screenshots/narrow-3-cards.png",
+      "sizes": "540x960",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "بطاقات مراجعة المفردات"
+    }
+  ]
+}

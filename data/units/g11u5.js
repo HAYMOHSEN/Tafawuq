@@ -1,0 +1,401 @@
+TAF.unit({
+  id: "g11u5",
+  grade: 11, sem: 1, n: 5,
+  title: "Making sense of the senses",
+  ar: "فهم الحواس",
+  topics: "الحواس الخمس وأفعالها وصفاتها، العمل التطوعي ودعم المكفوفين وطريقة برايل، والطعام والطبخ والتذوّق",
+  goals: [
+    "استخدام صيغ gerund وto-infinitive والمصدر المجرد بعد الأفعال والصفات وحروف الجر استخداماً صحيحاً",
+    "التمييز بين معاني remember, forget, stop, try, regret, go on, mean مع V-ing ومع to، واستخدام أفعال الحواس مع المفعول",
+    "استخدام مفردات الحواس والصفات الحسية والعمل التطوعي والطبخ في وصف التجارب",
+    "الاستنتاج من نص قرائي (قراءة ما بين السطور) ودعم الاستنتاج بأدلة من النص",
+    "التعبير عن التفضيلات بعبارات مثل I'd rather وI prefer X to Y",
+    "كتابة مراجعة (review) منظمة لمطعم أو مقهى أو كتاب أو فيلم"
+  ],
+  vocab: [
+    { w: "glance (at)", ar: "يلقي نظرة سريعة", pos: "verb", def: "to look at something very quickly", ex: "Rami glanced at the clock and realised he was late.", tag: "verbs of the senses" },
+    { w: "stare (at)", ar: "يحدّق", pos: "verb", def: "to look at someone or something for a long time", ex: "The little boy stared at the fireworks with his mouth open.", tag: "verbs of the senses" },
+    { w: "catch a glimpse (of)", ar: "يلمح (يرى شيئاً للحظة)", pos: "phrase", def: "to see something for a very short time, often not completely", ex: "From the bus window, we caught a glimpse of the Dead Sea.", tag: "verbs of the senses" },
+    { w: "whisper", ar: "يهمس", pos: "verb", def: "to speak very quietly, using your breath rather than your voice", ex: "We whispered in the library so that we wouldn't disturb anyone.", tag: "verbs of the senses" },
+    { w: "overhear", ar: "يسمع (حديثاً) مصادفةً", pos: "verb", def: "to hear what other people are saying without them knowing", ex: "I overheard my parents planning a surprise party for me.", tag: "verbs of the senses" },
+    { w: "sniff", ar: "يتشمّم", pos: "verb", def: "to smell something by breathing in quickly through your nose", ex: "The dog sniffed the bag and then started wagging its tail.", tag: "verbs of the senses" },
+    { w: "stroke", ar: "يمسّد (يمرّر يده بلطف)", pos: "verb", def: "to move your hand gently over something again and again", ex: "Hala stroked the kitten's soft fur until it fell asleep.", tag: "verbs of the senses" },
+    { w: "sense of smell", ar: "حاسة الشم", pos: "compound noun", def: "the natural ability to notice smells", ex: "Dogs have a much stronger sense of smell than humans.", tag: "the senses" },
+    { w: "deafening", ar: "يصمّ الآذان / مدوٍّ", pos: "adjective", def: "extremely loud", ex: "The noise of the drums at the wedding was deafening.", tag: "sensory adjectives" },
+    { w: "muffled", ar: "مكتوم (صوت)", pos: "adjective", def: "quiet and unclear because something is covering the sound", ex: "We could hear muffled voices through the classroom wall.", tag: "sensory adjectives" },
+    { w: "fragrant", ar: "عَطِر / فوّاح الرائحة", pos: "adjective", def: "having a sweet or pleasant smell", ex: "In summer, our garden is full of fragrant jasmine.", tag: "sensory adjectives" },
+    { w: "smooth", ar: "ناعم / أملس", pos: "adjective", def: "completely flat and even, with no rough parts", ex: "The pebbles on the beach felt smooth and cool under my feet.", tag: "sensory adjectives" },
+    { w: "rough", ar: "خشن", pos: "adjective", def: "having an uneven surface; not smooth", ex: "Years of farm work had made my grandfather's hands rough.", tag: "sensory adjectives" },
+    { w: "bitter", ar: "مُرّ", pos: "adjective", def: "having a strong, sharp taste that is not sweet", ex: "Dark chocolate is a little bitter, but I really like it.", tag: "sensory adjectives" },
+    { w: "blurred", ar: "مشوَّش / غير واضح", pos: "adjective", def: "not clear in shape or outline", ex: "Without my glasses, the words on the board look blurred.", tag: "sensory adjectives" },
+    { w: "mouth-watering", ar: "يسيل له اللعاب / شهيّ جداً", pos: "adjective", def: "looking or smelling so good that you want to eat it", ex: "The mouth-watering smell of fresh bread came from the bakery.", tag: "sensory adjectives" },
+    { w: "sighted", ar: "مُبصِر", pos: "adjective", def: "able to see (used when comparing with blind people)", ex: "Blind and sighted students worked together on the science project.", tag: "social work and education" },
+    { w: "visually impaired", ar: "ضعيف البصر / كفيف", pos: "adjective", def: "unable to see well, or unable to see at all", ex: "The museum offers audio guides for visually impaired visitors.", tag: "social work and education" },
+    { w: "braille", ar: "طريقة برايل (كتابة بالنقاط البارزة)", pos: "noun", def: "a system of raised dots that blind people read by touch", ex: "My cousin can read braille as quickly as I read print.", tag: "social work and education" },
+    { w: "disability", ar: "إعاقة", pos: "noun", def: "a condition that makes some everyday activities difficult for a person", ex: "The new school building is designed for students with disabilities.", tag: "social work and education" },
+    { w: "independent", ar: "مستقل / يعتمد على نفسه", pos: "adjective", def: "able to do things without help from other people", ex: "Learning to use a white cane helped Zaid become more independent.", tag: "social work and education" },
+    { w: "volunteer", ar: "متطوّع / يتطوّع", pos: "noun / verb", def: "someone who works without pay to help others; to offer such help", ex: "Hundreds of volunteers helped to clean the beach in Aqaba.", tag: "social work and education" },
+    { w: "charity", ar: "جمعية خيرية", pos: "noun", def: "an organisation that collects money or gives help to people in need", ex: "The charity provides free eye tests for children in villages.", tag: "social work and education" },
+    { w: "raise awareness (of)", ar: "يرفع الوعي بـ", pos: "collocation", def: "to help people know more about a problem or issue", ex: "Our class made posters to raise awareness of eye health.", tag: "social work and education" },
+    { w: "raise money (for)", ar: "يجمع التبرعات / المال لـ", pos: "collocation", def: "to collect money for a good cause", ex: "The students raised money for the charity by selling homemade cakes.", tag: "social work and education" },
+    { w: "make a difference", ar: "يُحدث فرقاً", pos: "collocation", def: "to have a good effect on a person or situation", ex: "Even one hour of volunteering a week can make a difference.", tag: "social work and education" },
+    { w: "bland", ar: "بلا طعم / ماسخ", pos: "adjective", def: "having very little flavour", ex: "The rice was bland, so I added some salt and cumin.", tag: "food and cooking" },
+    { w: "spicy", ar: "حارّ / كثير البهارات", pos: "adjective", def: "having a strong, hot taste from spices", ex: "My brother loves spicy food, but chilli makes my eyes water.", tag: "food and cooking" },
+    { w: "savoury", ar: "مالح (غير حلو)", pos: "adjective", def: "salty or spicy rather than sweet", ex: "Would you like something sweet or savoury with your tea?", tag: "food and cooking" },
+    { w: "sour", ar: "حامض", pos: "adjective", def: "having a sharp taste like lemon or vinegar", ex: "Many Jordanians love eating sour green plums with a little salt.", tag: "food and cooking" },
+    { w: "chop", ar: "يقطّع / يفرم", pos: "verb", def: "to cut something into small pieces with a knife", ex: "Chop the parsley finely for the tabbouleh.", tag: "food and cooking" },
+    { w: "grill", ar: "يشوي (على الشواية)", pos: "verb", def: "to cook food over or under strong direct heat", ex: "On Fridays, my uncle grills chicken in the garden.", tag: "food and cooking" },
+    { w: "roast", ar: "يحمّص / يشوي في الفرن", pos: "verb", def: "to cook food in an oven, or to heat coffee beans", ex: "The smell of roasting coffee beans filled the old market.", tag: "food and cooking" },
+    { w: "simmer", ar: "يطهو على نار هادئة", pos: "verb", def: "to cook a liquid gently, just below boiling point", ex: "Let the lentil soup simmer for twenty minutes.", tag: "food and cooking" },
+    { w: "recipe", ar: "وصفة طبخ", pos: "noun", def: "a set of instructions for cooking a dish", ex: "My grandmother never writes down her recipes – she keeps them in her head.", tag: "food and cooking" },
+    { w: "ingredients", ar: "المكوّنات", pos: "noun", def: "the different foods you combine to make a dish", ex: "The main ingredients of maqluba are rice, aubergines and chicken.", tag: "food and cooking" }
+  ],
+  grammar: [
+    {
+      id: "g11u5-gr1",
+      title: "Gerunds and infinitives",
+      ar: "صيغة V-ing والمصدر مع to وبدونها",
+      body: [
+        { p: "عندما يأتي فعل بعد فعل آخر أو بعد حرف جر أو بعد صفة، لا نضعه كيفما اتفق؛ بل نختار له واحدة من ثلاث صيغ: **gerund** (V-ing مثل eating)، أو **to-infinitive** (to + V مثل to eat)، أو **bare infinitive** (الفعل المجرد مثل eat). الاختيار يعتمد غالباً على الكلمة التي تسبق الفعل، لذلك أفضل طريقة للإتقان هي حفظ المجموعات مع أمثلتها." },
+        { h: "1) الـ Gerund (V-ing)" },
+        { p: "الـ gerund فعل ينتهي بـ ing لكنه يعمل عمل **الاسم**، تماماً مثل المصدر في العربية («الطبخ»، «القراءة»). لذلك يمكن أن يكون فاعلاً أو مفعولاً به، ويأتي بعد حروف الجر." },
+        { table: { head: ["الاستخدام", "كلمات مهمة", "مثال"], rows: [
+          ["فاعل في بداية الجملة", "—", "Smelling fresh bread makes me hungry."],
+          ["بعد حروف الجر", "in, at, of, about, for, without, before, after, by, instead of", "She's interested in learning braille."],
+          ["بعد أفعال معينة", "enjoy, avoid, mind, suggest, consider, finish, miss, practise, imagine, admit, deny, keep, risk, give up, put off, can't stand, can't help", "I can't stand eating cold soup."],
+          ["بعد تعبيرات ثابتة", "It's no use, It's (not) worth, There's no point (in), look forward to, be/get used to, have difficulty (in), spend time", "It's worth visiting the old spice market."]
+        ] } },
+        { ex: [
+          ["==Volunteering== at the charity taught me patience.", "العمل التطوعي في الجمعية علّمني الصبر. (فاعل)"],
+          ["Wash your hands before ==chopping== the vegetables.", "اغسل يديك قبل تقطيع الخضار. (بعد حرف الجر before)"],
+          ["Would you mind ==turning== the music down?", "هل تمانع أن تخفض صوت الموسيقى؟"],
+          ["It's no use ==shouting== – he can't hear you.", "لا فائدة من الصراخ، فهو لا يسمعك."],
+          ["We spent the afternoon ==cooking== for our neighbours.", "قضينا فترة العصر في الطبخ لجيراننا."]
+        ] },
+        { tip: "انتبه! كلمة **to** في look forward to وbe used to وget used to وobject to هي **حرف جر** وليست جزءاً من المصدر، لذلك يأتي بعدها V-ing. اختبار سريع: إذا استطعت أن تضع بعدها اسماً (I'm looking forward to the trip) فهي حرف جر ← I'm looking forward to ==visiting== you." },
+        { warn: "✗ I look forward to hear from you. ← ✓ I look forward to ==hearing== from you. بعد look forward to يأتي V-ing دائماً." },
+        { warn: "لا تخلط بين used to وbe used to: I ==used to eat== spicy food. (كنت آكله في الماضي، والعادة انتهت) مقابل I'm ==used to eating== spicy food. (أنا معتاد على أكله الآن)." },
+        { h: "2) الـ To-infinitive (to + V)" },
+        { table: { head: ["الاستخدام", "كلمات مهمة", "مثال"], rows: [
+          ["بعد أفعال معينة", "decide, hope, refuse, manage, afford, offer, promise, agree, plan, want, would like, learn, seem, pretend, expect, need, arrange, fail", "We decided to volunteer at the summer camp."],
+          ["بعد الصفات", "It's easy / hard / important / possible to…، I'm happy / glad / sorry / surprised to…", "It isn't easy to read with your fingers."],
+          ["للتعبير عن الغرض (لكي)", "to / in order to / so as to", "I went to the market to buy some fresh herbs."],
+          ["بعد too و enough", "too + صفة + to / صفة + enough + to", "The tea is too hot to drink now."],
+          ["بعد كلمات الاستفهام", "how, what, where, when, which + to", "Can you show me how to grill fish?"],
+          ["بعد the first / the last / the only", "the first + to", "Laila was the first to arrive at the charity event."]
+        ] } },
+        { ex: [
+          ["Sami managed ==to finish== the race despite the heat.", "تمكّن سامي من إنهاء السباق رغم الحر."],
+          ["I can't afford ==to eat== out every weekend.", "لا أستطيع تحمّل تكلفة الأكل خارج البيت في كل عطلة نهاية أسبوع."],
+          ["My brother offered ==to drive== us to the charity market.", "عرض أخي أن يوصلنا بالسيارة إلى السوق الخيري."],
+          ["She promised ==not to tell== anyone about the surprise.", "وعدت ألّا تخبر أحداً بالمفاجأة."]
+        ] },
+        { tip: "للنفي نضع **not** قبل to أو قبل V-ing مباشرة: I decided ==not to go==. / He's worried about ==not finding== a seat." },
+        { h: "3) فعل + مفعول به + to-infinitive" },
+        { p: "بعض الأفعال تحتاج إلى مفعول به (شخص غالباً) قبل to: **want, ask, tell, advise, allow, encourage, expect, invite, persuade, remind, teach, warn, would like, need**." },
+        { ex: [
+          ["My teacher advised me ==to read== more in English.", "نصحني معلمي أن أقرأ أكثر بالإنجليزية."],
+          ["The doctor told my father ==not to eat== so much salt.", "طلب الطبيب من والدي ألّا يأكل الكثير من الملح."],
+          ["Would you like me ==to help== you with the cooking?", "هل تريدني أن أساعدك في الطبخ؟"]
+        ] },
+        { warn: "✗ I want that you come with me. ← ✓ I want ==you to come== with me. لا نستخدم that بعد want، بل مفعول + to." },
+        { warn: "✗ She suggested me to try the soup. ← ✓ She suggested ==trying== the soup. / She suggested that I (should) try the soup. الفعل suggest لا يأتي بعده مفعول + to أبداً." },
+        { h: "4) المصدر المجرد (Bare infinitive)" },
+        { table: { head: ["بعد…", "مثال", "المعنى"], rows: [
+          ["الأفعال الناقصة: can, could, must, should, will, would, may, might", "You should taste the sauce first.", "ينبغي أن تتذوّق الصلصة أولاً."],
+          ["make + مفعول + V (يُجبر / يجعل)", "Onions always make me cry.", "البصل دائماً يجعلني أبكي."],
+          ["let + مفعول + V (يسمح)", "My mum let me decorate the cake.", "سمحت لي أمي بتزيين الكعكة."],
+          ["had better ('d better) + V", "You'd better wear a jacket – it's cold.", "من الأفضل أن ترتدي سترة، فالجو بارد."],
+          ["would rather ('d rather) + V", "I'd rather stay at home tonight.", "أفضّل البقاء في البيت الليلة."],
+          ["help + مفعول + V أو to V", "Volunteers helped us (to) paint the classroom.", "ساعدنا المتطوعون في دهان الصف."]
+        ] } },
+        { tip: "للنفي: had better ==not== + V وwould rather ==not== + V: You'd better not touch the oven door. / I'd rather not eat so late." },
+        { warn: "✗ My parents let me to go to the camp. ← ✓ My parents let me ==go== to the camp. / My parents allowed me ==to go== to the camp. القاعدة: let + V، أما allow + to V." },
+        { warn: "في المبني للمجهول تعود to بعد make: They ==were made to wait== for an hour. أما let فلا تُستخدم في المبني للمجهول؛ نستخدم بدلها be allowed to: We ==were allowed to leave== early." }
+      ],
+      summary: [
+        "V-ing فاعلاً في أول الجملة وبعد حروف الجر: Cooking is fun. / good at cooking.",
+        "V-ing بعد: enjoy, avoid, mind, suggest, consider, finish, can't stand, give up.",
+        "V-ing بعد: It's no use / It's worth / There's no point / look forward to / be used to.",
+        "to + V بعد: decide, hope, refuse, manage, afford, offer, promise، وبعد الصفات (It's easy to)، وللغرض (لكي).",
+        "فعل + مفعول + to V: want / ask / tell / advise / allow sb to do (لكن suggest + V-ing).",
+        "V مجرد بعد: modals، make / let + مفعول، had better، would rather."
+      ],
+      qs: [
+        { t: "mcq", q: "____ vegetables every day is good for your health.", o: ["Eat", "Eating", "Ate", "Eats"], a: 1, x: "الفعل هنا فاعل في بداية الجملة، والفاعل يكون اسماً ← gerund: Eating." },
+        { t: "mcq", q: "My little sister really enjoys ____ cakes with our grandmother.", o: ["baking", "bake", "to bake", "baked"], a: 0, x: "enjoy من الأفعال التي يأتي بعدها V-ing دائماً." },
+        { t: "mcq", q: "My parents won't let me ____ the cooker on my own yet.", o: ["to use", "using", "use", "used"], a: 2, x: "let + مفعول + فعل مجرد بدون to: let me use." },
+        { t: "mcq", q: "I'd rather ____ at home and cook than go to a restaurant tonight.", o: ["stay", "to stay", "staying", "stayed"], a: 0, x: "would rather ('d rather) يأتي بعدها فعل مجرد بدون to: I'd rather stay … than go …" },
+        { t: "mcq", q: "It's no use ____ to the manager – he never listens.", o: ["complain", "complaining", "complains", "complained"], a: 1, x: "التعبير الثابت It's no use يأتي بعده V-ing." },
+        { t: "mcq", q: "You'd better ____ the soup before you add more salt.", o: ["tasting", "to taste", "tasted", "taste"], a: 3, x: "'d better = had better، ويأتي بعدها فعل مجرد بدون to." },
+        { t: "mcq", q: "Lina suggested ____ to the new restaurant near the university.", o: ["us to go", "going", "to go", "go"], a: 1, x: "suggest + V-ing. لا نقول suggested us to go ولا suggested to go." },
+        { t: "gap", q: "Thank you for ____ (help) us at the charity event.", a: ["helping"], x: "بعد حرف الجر for يأتي V-ing." },
+        { t: "gap", q: "Hassan refused ____ (eat) the soup because it was far too spicy.", a: ["to eat"], x: "refuse من الأفعال التي يأتي بعدها to + V." },
+        { t: "gap", q: "She went to the pharmacy ____ (buy) some eye drops.", a: ["to buy", "in order to buy", "so as to buy"], x: "نعبّر عن الغرض (لكي تشتري) بـ to + V أو in order to + V." },
+        { t: "gap", q: "It isn't easy ____ (read) braille when you first start.", a: ["to read"], x: "بعد الصفة في تركيب It isn't easy يأتي to + V." },
+        { t: "gap", q: "I'm looking forward to ____ (meet) the new volunteers on Saturday.", a: ["meeting"], x: "to في look forward to حرف جر، لذلك يأتي بعدها V-ing." },
+        { t: "gap", q: "The coach made us ____ (run) around the field three times.", a: ["run"], x: "make + مفعول + فعل مجرد بدون to (في المبني للمعلوم)." },
+        { t: "tr", q: "It is useful to learn how to cook.", p: "Rewrite using the word given: WORTH. It's …", a: ["It's worth learning how to cook.", "It is worth learning how to cook.", "It's worth learning to cook.", "It is worth learning to cook."], x: "It's worth + V-ing = يستحق أن / من المفيد أن." },
+        { t: "tr", q: "'You should drink more water,' the doctor said to me.", p: "Rewrite starting with: The doctor advised me …", a: ["The doctor advised me to drink more water."], x: "advise + مفعول + to V." },
+        { t: "err", q: "Would you mind close the window? The noise outside is deafening.", w: "close", c: "closing (Would you mind closing …?)", x: "mind يأتي بعده V-ing دائماً: Would you mind closing the window? (لا نقول mind close ولا mind to close)." },
+        { t: "err", q: "I'm slowly getting used to wake up at six for school.", w: "wake", c: "waking", x: "get used to = يعتاد على، وto هنا حرف جر ← V-ing: getting used to waking up." },
+        { t: "order", a: "My parents encouraged me to volunteer at the charity.", x: "encourage + مفعول (me) + to V." }
+      ]
+    },
+    {
+      id: "g11u5-gr2",
+      title: "Verbs followed by gerund or infinitive (change in meaning)",
+      ar: "أفعال يتغيّر معناها مع V-ing أو to",
+      body: [
+        { p: "بعض الأفعال يمكن أن يأتي بعدها **V-ing** أو **to + V**، لكن **المعنى يتغيّر**. هذه الأفعال من أكثر ما يُسأل عنه في الامتحانات، فاحفظها مع أمثلتها، وانتبه دائماً إلى السياق." },
+        { h: "1) أفعال يتغيّر معناها" },
+        { table: { head: ["الفعل", "+ V-ing", "+ to + V"], rows: [
+          ["remember", "يتذكّر شيئاً **فعله سابقاً** (ذكرى)", "يتذكّر أن **يقوم بشيء** مطلوب منه (فيفعله)"],
+          ["forget", "ينسى شيئاً حدث (غالباً: I'll never forget + V-ing)", "ينسى أن يفعل شيئاً (فلا يفعله)"],
+          ["regret", "يندم على شيء فعله في الماضي", "يأسف لإبلاغ خبر سيئ (رسمي): regret to say / tell / inform"],
+          ["stop", "يتوقّف عن النشاط نفسه (يتركه)", "يتوقّف عمّا يفعله **لكي** يفعل شيئاً آخر"],
+          ["try", "يجرّب الشيء كحلّ ليرى النتيجة", "يحاول ويبذل جهداً (وقد لا ينجح)"],
+          ["go on", "يستمر في فعل الشيء نفسه", "ينتقل إلى فعل شيء جديد بعد الأول"],
+          ["mean", "يعني / يستلزم", "ينوي / يقصد"]
+        ] } },
+        { ex: [
+          ["I remember ==tasting== mango for the first time in Aqaba.", "أتذكّر أنني تذوّقت المانجا أول مرة في العقبة. (حدث سابق)"],
+          ["Please remember ==to switch off== the oven.", "تذكّر من فضلك أن تطفئ الفرن. (واجب)"],
+          ["I'll never forget ==hearing== the waves at night.", "لن أنسى أبداً سماع صوت الأمواج ليلاً."],
+          ["Oh no! I forgot ==to add== salt to the rice.", "نسيت أن أضيف الملح إلى الأرز (فلم أضفه)."],
+          ["I regret ==being== rude to the waiter.", "أندم على أنني كنت وقحاً مع النادل."],
+          ["We regret ==to inform== you that the trip has been cancelled.", "يؤسفنا إبلاغكم بأن الرحلة أُلغيت."]
+        ] },
+        { tip: "حيلة للحفظ مع remember / forget / regret: **V-ing ← نظرة إلى الوراء** (الحدث وقع أولاً ثم تذكّرته أو ندمت عليه)، و**to + V ← نظرة إلى الأمام** (تتذكّر أولاً ثم تقوم بالفعل)." },
+        { ex: [
+          ["My uncle stopped ==drinking== fizzy drinks last year.", "توقّف عمّي عن شرب المشروبات الغازية العام الماضي. (تركها)"],
+          ["We stopped ==to buy== hot bread on the way home.", "توقّفنا في الطريق لكي نشتري خبزاً ساخناً."],
+          ["If the soup is bland, try ==adding== some lemon juice.", "إذا كان الحساء بلا طعم فجرّب إضافة عصير الليمون. (تجربة حل)"],
+          ["I tried ==to read== the sign, but it was too blurred.", "حاولت أن أقرأ اللافتة لكنها كانت غير واضحة. (جهد)"],
+          ["The baby went on ==crying== all night.", "استمر الطفل في البكاء طوال الليل."],
+          ["After explaining braille, the speaker went on ==to show== us how to write it.", "بعد أن شرحت طريقة برايل، انتقلت المتحدثة إلى تعليمنا كيف نكتبها."],
+          ["Volunteering often means ==giving up== some of your free time.", "التطوع غالباً يعني (يستلزم) التخلّي عن جزء من وقت فراغك."],
+          ["Sorry, I didn't mean ==to wake== you up.", "آسف، لم أقصد أن أوقظك."]
+        ] },
+        { warn: "✗ Don't forget locking the door. ← ✓ Don't forget ==to lock== the door. التذكير بواجب يجب فعله ← to + V." },
+        { warn: "انتبه للمعنى: Omar stopped ==to talk== to me. (توقّف عن المشي لكي يتحدث معي) ≠ Omar stopped ==talking== to me. (توقّف عن الحديث معي، أي لم يعد يكلّمني!)." },
+        { h: "2) أفعال لا يتغيّر معناها تقريباً" },
+        { p: "الأفعال **like, love, hate, prefer, begin, start, continue** يأتي بعدها V-ing أو to + V **دون فرق كبير** في المعنى." },
+        { ex: [
+          ["It began ==to rain== as we left the house.", "بدأ المطر يهطل عندما غادرنا البيت. (= began raining)"],
+          ["I love ==cooking== for my family.", "أحب الطبخ لعائلتي. (= love to cook)"],
+          ["The charity will continue ==to support== blind students.", "ستستمر الجمعية في دعم الطلاب المكفوفين. (= continue supporting)"]
+        ] },
+        { table: { head: ["الحالة", "القاعدة", "مثال"], rows: [
+          ["would like / would love / would hate / would prefer", "دائماً to + V", "I'd love to try your recipe."],
+          ["prefer للمقارنة", "prefer V-ing to V-ing / would prefer to V rather than V", "I prefer walking to driving."],
+          ["start / begin بصيغة -ing", "نتجنّب تكرار ing ونستخدم to", "It's starting to snow. (لا نقول starting snowing)"],
+          ["like + to V", "للعادة التي نراها صحيحة أو مفيدة (لا بالضرورة ممتعة)؛ أما like + V-ing فللشيء الذي نستمتع به", "I like to wash my hands before meals."]
+        ] } },
+        { h: "3) أفعال الحواس + مفعول + V أو V-ing" },
+        { p: "مع أفعال الحواس **see, hear, watch, notice, feel, smell, listen to** نستخدم: مفعول + **فعل مجرد** إذا شاهدنا أو سمعنا **الحدث كاملاً** من بدايته إلى نهايته، ومفعول + **V-ing** إذا شاهدنا أو سمعنا **جزءاً من الحدث وهو مستمر**." },
+        { ex: [
+          ["I saw the old man ==cross== the road.", "رأيته يعبر الشارع كاملاً (من جهة إلى الجهة الأخرى)."],
+          ["I saw the old man ==crossing== the road.", "رأيته وهو يعبر (رأيت جزءاً من العبور فقط)."],
+          ["We watched the chef ==chop== an onion in ten seconds.", "شاهدنا الطاهي يقطّع بصلة في عشر ثوانٍ (الحدث كاملاً)."],
+          ["I could hear someone ==whispering== behind me.", "كنت أسمع شخصاً يهمس خلفي (حدث مستمر)."],
+          ["Can you smell something ==burning==?", "هل تشمّ رائحة شيء يحترق؟"]
+        ] },
+        { warn: "✗ I heard her to sing. ← ✓ I heard her ==sing== / I heard her singing. لا نستخدم to بعد أفعال الحواس في المبني للمعلوم. لكن في **المبني للمجهول** تعود to: He was seen ==to leave== the building at ten o'clock." },
+        { tip: "مع smell نستخدم عادةً V-ing لأن الرائحة تدل على شيء مستمر: I can smell coffee ==roasting==." }
+      ],
+      summary: [
+        "remember / forget + V-ing = حدث في الماضي؛ + to V = واجب يجب فعله.",
+        "regret + V-ing = ندم على الماضي؛ regret to say / inform = يؤسفنا إبلاغكم.",
+        "stop + V-ing = يترك النشاط؛ stop + to V = يتوقّف لكي يفعل شيئاً.",
+        "try + V-ing = يجرّب كحلّ؛ try + to V = يحاول بجهد.",
+        "go on + V-ing = يستمر؛ go on + to V = ينتقل لشيء جديد. mean + V-ing = يستلزم؛ mean + to V = ينوي.",
+        "like / love / hate / begin / start / continue ← الصيغتان (لكن would like + to V). see / hear / watch + مفعول + V (الحدث كاملاً) أو V-ing (جزء منه)."
+      ],
+      qs: [
+        { t: "mcq", q: "Did you remember ____ bread on your way home? We've got none left.", o: ["buying", "to buy", "buy", "bought"], a: 1, x: "السؤال عن واجب كان مطلوباً منه (أن يشتري الخبز) ← remember + to V." },
+        { t: "mcq", q: "We had been walking for two hours, so we stopped ____ a rest under a tree.", o: ["to have", "having", "have", "had"], a: 0, x: "توقّفوا عن المشي لكي يرتاحوا ← stop + to V (للغرض)." },
+        { t: "mcq", q: "It started ____ just as we arrived at the beach.", o: ["rain", "to rain", "rained", "to raining"], a: 1, x: "start يأتي بعده to V أو V-ing دون فرق في المعنى، والخيار الصحيح الوحيد بين الخيارات هو to rain." },
+        { t: "mcq", q: "If the rice is still bland, try ____ a little cumin and see what happens.", o: ["to add", "add", "adding", "added"], a: 2, x: "and see what happens تدل على تجربة حلّ لنرى النتيجة ← try + V-ing." },
+        { t: "mcq", q: "We regret ____ you that tomorrow's cooking class has been cancelled.", o: ["informing", "inform", "informed", "to inform"], a: 3, x: "إبلاغ خبر سيئ بأسلوب رسمي ← regret to inform." },
+        { t: "mcq", q: "The guide ignored our questions and went on ____ about the same painting as if nobody had spoken.", o: ["to talk", "talk", "talking", "talked"], a: 2, x: "استمر في الكلام نفسه (about the same painting) دون توقف ← go on + V-ing. أما go on + to V فتعني الانتقال إلى شيء جديد." },
+        { t: "mcq", q: "Which sentence is NOT correct?", o: ["We saw the thief leave the shop.", "We saw the thief leaving the shop.", "We saw the thief to leave the shop.", "The thief was seen to leave the shop."], a: 2, x: "بعد see + مفعول في المبني للمعلوم نستخدم فعلاً مجرداً أو V-ing بدون to. أما to فتأتي فقط في المبني للمجهول (was seen to leave)." },
+        { t: "mcq", q: "I'd prefer ____ at home tonight rather than go out.", o: ["to stay", "staying", "stay", "stayed"], a: 0, x: "would prefer يأتي بعدها to + V، والتركيب: would prefer to V rather than V." },
+        { t: "gap", q: "Sorry, I didn't mean ____ (hurt) your feelings.", a: ["to hurt"], x: "mean + to V = ينوي / يقصد: لم أقصد أن أجرح مشاعرك." },
+        { t: "gap", q: "Don't forget ____ (turn) off the cooker when the soup is ready.", a: ["to turn"], x: "تذكير بواجب يجب فعله في المستقبل ← forget + to V." },
+        { t: "gap", q: "Sami tried his best ____ (read) the blurred sign, but he couldn't make out the words.", a: ["to read"], x: "tried his best = بذل أقصى جهده، والمحاولة الصعبة ← try + to V." },
+        { t: "gap", q: "I regret not ____ (listen) to my mother's advice.", a: ["listening", "having listened"], x: "الندم على شيء في الماضي ← regret + (not) V-ing." },
+        { t: "gap", q: "After finishing school, Hala went on ____ (become) a well-known chef.", a: ["to become"], x: "انتقلت إلى مرحلة جديدة في حياتها ← go on + to V." },
+        { t: "gap", q: "Getting fit usually means ____ (change) your eating habits.", a: ["changing"], x: "mean هنا بمعنى «يستلزم / يعني» ← mean + V-ing." },
+        { t: "tr", q: "I watched the chef. He chopped all the onions in a minute.", p: "Join the sentences: I watched the chef …", a: ["I watched the chef chop all the onions in a minute.", "I watched the chef chopping all the onions in a minute.", "I watched the chef chop all of the onions in a minute.", "I watched the chef chopping all of the onions in a minute."], x: "watch + مفعول + فعل مجرد (الحدث كاملاً) أو V-ing (جزء منه). هنا شاهد الحدث كاملاً (in a minute) فالأفضل chop." },
+        { t: "tr", q: "He doesn't play video games any more.", p: "Use the word given: STOPPED. He has …", a: ["He has stopped playing video games.", "He's stopped playing video games."], x: "ترك النشاط نهائياً ← stop + V-ing." },
+        { t: "err", q: "Yesterday I watched my grandfather to plant a small olive tree in the garden.", w: "to", c: "plant (watched my grandfather plant …)", x: "بعد أفعال الحواس (see, hear, watch…) + مفعول نستخدم الفعل المجرد (أو V-ing) في المبني للمعلوم بدون to. أما في المبني للمجهول فتعود to: He was seen to plant a tree." },
+        { t: "order", a: "I will never forget seeing snow for the first time.", x: "forget + V-ing لذكرى في الماضي، وتأتي غالباً مع never." }
+      ]
+    }
+  ],
+  reading: {
+    title: "Reading the World with Her Fingertips",
+    text: [
+      "Close your eyes and run your fingertips across a page covered in tiny raised dots. To most sighted people, it would feel like a rough, meaningless pattern. To a blind reader, however, those same dots are words, stories and a door to education. Few people have understood the power of those little dots better than Sabriye Tenberken.",
+      "Sabriye grew up in Germany, and when she was about twelve years old, she became blind. Losing her sight at that age must have turned her world upside down. Yet if anyone expected her ambitions to shrink, they were wrong. Later, instead of choosing an easy path, she decided to study one of the most unusual subjects a university can offer.",
+      "That subject was Tibetology – the study of the language, history and culture of Tibet. There was, however, a serious problem. Blind students could read German, English and many other languages in braille, but there was no braille script for Tibetan. Rather than accept the situation, Sabriye set out to change it. She studied the Tibetan writing system closely and developed a braille script for it, making it possible for blind Tibetans to read and write in their own language.",
+      "Yet a script on paper means little if nobody teaches it. Sabriye travelled to Tibet, where she and Paul Kronenberg co-founded Braille Without Borders. Its aim was simple but ambitious: to give blind people the skills to read, learn and live independently instead of depending on others for everything. For many blind children, it offered something that had once seemed out of reach – the chance to go to school.",
+      "Her work did not stop there. Years later, she co-founded kanthari in India, taking her belief in education and social change to a new country. It seems that each of her projects began with the same simple question: what is missing, and how can I help to provide it?",
+      "Sabriye Tenberken's story is not really about losing a sense. It is about learning to use the others, and about refusing to let anyone else decide what a blind person can or cannot do. Perhaps the biggest obstacle in her way was never her blindness itself, but other people's low expectations."
+    ],
+    skill: "Making inferences",
+    skillAr: "الاستنتاج (قراءة ما بين السطور)",
+    skillTip: "الاستنتاج يعني أن تفهم ما لم يقله الكاتب صراحةً بل ألمح إليه. اجمع الأدلة من النص: كلمات مثل must have, it seems, perhaps, yet، والصفات والأفعال التي اختارها الكاتب، ثم اسأل نفسك: ماذا تخبرني هذه الكلمات عن الشخص أو الموقف؟ تأكّد دائماً أن استنتاجك مدعوم بجملة من النص، وليس مجرد رأيك الشخصي أو معلومة من خارجه.",
+    gloss: [
+      ["fingertips", "أطراف الأصابع"],
+      ["raised dots", "نقاط بارزة"],
+      ["sighted", "مُبصِر (قادر على الرؤية)"],
+      ["meaningless", "بلا معنى"],
+      ["turned her world upside down", "قلبت عالمها رأساً على عقب"],
+      ["ambitions", "طموحات"],
+      ["shrink", "يتقلّص / يصغر"],
+      ["Tibetology", "الدراسات التبتية (دراسة لغة التبت وتاريخها وثقافتها)"],
+      ["script", "نظام كتابة / أبجدية"],
+      ["set out to", "شرع في / عقد العزم على"],
+      ["co-founded", "شارك في تأسيس"],
+      ["ambitious", "طموح (هدف كبير يحتاج إلى جهد)"],
+      ["independently", "باستقلالية / دون الاعتماد على أحد"],
+      ["out of reach", "بعيد المنال"],
+      ["obstacle", "عقبة / عائق"],
+      ["expectations", "توقّعات"]
+    ],
+    gist: [
+      "تبدو نقاط برايل البارزة للمبصرين بلا معنى، لكنها للكفيف كلمات وقصص وباب للتعليم.",
+      "فقدت سابرييه بصرها في نحو الثانية عشرة، لكنها اختارت دراسة تخصص غير مألوف.",
+      "لم تكن للتبتية كتابة بطريقة برايل، فطوّرتها سابرييه ليقرأ المكفوفون بلغتهم.",
+      "سافرت سابرييه إلى التبت وشاركت في تأسيس «برايل بلا حدود» لتعليم المكفوفين.",
+      "شاركت سابرييه لاحقاً في تأسيس «كانثاري» في الهند، وبدأت مشاريعها بسؤال: ما الذي ينقص؟",
+      "قصتها عن استخدام بقية الحواس، وأكبر عقبة أمامها كانت توقعات الناس المتدنية."
+    ],
+    tr: [
+      "أغمض عينيك ومرّر أطراف أصابعك على صفحة مغطّاة بنقاط بارزة صغيرة. سيبدو ملمسها لمعظم المبصرين كأنه نمط خشن لا معنى له. أما بالنسبة إلى القارئ الكفيف، فهذه النقاط نفسها كلمات وقصص وباب إلى التعليم. وقليلون هم من أدركوا قوة هذه النقاط الصغيرة أفضل مما أدركتها سابرييه تينبركن.",
+      "نشأت سابرييه في ألمانيا، وفي نحو الثانية عشرة من عمرها أصبحت كفيفة. ولا بد أن فقدان بصرها في تلك السن قد قلب عالمها رأساً على عقب. ومع ذلك، فمن توقّع أن تتضاءل طموحاتها كان مخطئاً. وفي وقت لاحق، وبدلاً من أن تختار طريقاً سهلاً، قررت أن تدرس أحد أغرب التخصصات التي يمكن أن تقدّمها جامعة.",
+      "كان هذا التخصص هو الدراسات التبتية، أي دراسة لغة التبت وتاريخها وثقافتها. ولكن كانت هناك مشكلة جدّية؛ فقد كان الطلاب المكفوفون يستطيعون قراءة الألمانية والإنجليزية ولغات كثيرة أخرى بطريقة برايل، لكن لم يكن هناك نظام كتابة بطريقة برايل للغة التبتية. وبدلاً من أن تقبل سابرييه بهذا الوضع، شرعت في تغييره. فدرست نظام الكتابة التبتي عن كثب، وطوّرت للتبتية نظام كتابة بطريقة برايل، مما أتاح للتبتيين المكفوفين أن يقرؤوا ويكتبوا بلغتهم الخاصة.",
+      "غير أن نظام الكتابة على الورق لا يعني الكثير إن لم يعلّمه أحد. وسافرت سابرييه إلى التبت، حيث شاركت هي وبول كرونينبيرغ في تأسيس منظمة «برايل بلا حدود». وكان هدفها بسيطاً لكنه طموح: أن تمنح المكفوفين المهارات اللازمة ليقرؤوا ويتعلّموا ويعيشوا باستقلالية بدلاً من الاعتماد على الآخرين في كل شيء. وبالنسبة إلى كثير من الأطفال المكفوفين، وفّرت لهم المنظمة ما كان يبدو فيما مضى بعيد المنال: فرصة الذهاب إلى المدرسة.",
+      "ولم يتوقف عملها عند هذا الحد. فبعد سنوات، شاركت في تأسيس «كانثاري» في الهند، ناقلةً إيمانها بالتعليم والتغيير الاجتماعي إلى بلد جديد. ويبدو أن كل مشروع من مشاريعها بدأ بالسؤال البسيط نفسه: ما الذي ينقص، وكيف يمكنني أن أساعد في توفيره؟",
+      "إن قصة سابرييه تينبركن ليست في الحقيقة عن فقدان إحدى الحواس، بل عن تعلّم استخدام بقية الحواس، وعن رفض السماح لأي شخص آخر بأن يقرّر ما يستطيع الكفيف فعله وما لا يستطيع. وربما لم تكن أكبر عقبة في طريقها يوماً فقدانها للبصر بحد ذاته، بل توقعات الآخرين المتدنية."
+    ],
+    qs: [
+      { t: "mcq", q: "What is the main idea of the text?", o: ["Braille is very difficult for sighted people to learn.", "A woman who lost her sight created opportunities for other blind people.", "Tibetology is one of the hardest subjects at university.", "Blind children in Tibet were not allowed to go to school."], a: 1, x: "النص كله يتحدث عن سابرييه التي فقدت بصرها ثم طوّرت طريقة برايل للتبتية وشاركت في تأسيس مؤسسات لمساعدة المكفوفين. الخيارات الأخرى تفاصيل جانبية أو معلومات غير مذكورة." },
+      { t: "mcq", q: "What can we infer from paragraph 2?", o: ["Sabriye's family wanted her to study Tibetology.", "Sabriye found it easy to get used to being blind.", "Some people may have expected less of Sabriye after she became blind.", "Sabriye was born in Tibet."], a: 2, x: "الجملة if anyone expected her ambitions to shrink, they were wrong تلمّح إلى أن بعض الناس ربما توقّعوا أن تقلّ طموحاتها. أما must have turned her world upside down فتنفي أن الأمر كان سهلاً." },
+      { t: "mcq", q: "Why does the writer mention German and English in paragraph 3?", o: ["To show that braille existed for some languages but not for Tibetan.", "To show that Sabriye could speak several languages.", "To compare how difficult different languages are.", "To explain why Tibetan is hard to write."], a: 0, x: "الكاتب يقارن: لغات كثيرة كانت لها كتابة برايل، لكن but there was no braille script for Tibetan. هذه المقارنة توضّح المشكلة التي حلّتها سابرييه." },
+      { t: "mcq", q: "The sentence 'Yet a script on paper means little if nobody teaches it' (paragraph 4) suggests that…", o: ["the script Sabriye developed was not very good.", "blind people prefer listening to reading.", "paper was difficult to find in Tibet.", "creating the script was only the first step."], a: 3, x: "المعنى الضمني: اختراع طريقة الكتابة وحده لا يكفي، بل يجب تعليمها للناس، ولذلك سافرت إلى التبت وشاركت في تأسيس مؤسسة تعليمية." },
+      { t: "mcq", q: "In paragraph 4, what does 'Its' in 'Its aim was simple but ambitious' refer to?", o: ["Tibet", "Braille Without Borders", "the script", "the paper"], a: 1, x: "Its يعود على أقرب اسم مناسب قبله: Braille Without Borders، فهي المؤسسة التي لها هدف (aim)." },
+      { t: "mcq", q: "What does the question at the end of paragraph 5 tell us about Sabriye?", o: ["She notices what people need and tries to provide it.", "She is never satisfied with other people's work.", "She prefers asking questions to taking action.", "She did not know what to do after her work in Tibet."], a: 0, x: "السؤال what is missing, and how can I help to provide it? يدلّ على أنها تبحث عن الاحتياجات الناقصة في المجتمع وتعمل على تلبيتها." },
+      { t: "tf", q: "Sabriye was blind from birth.", a: false, x: "النص يقول when she was about twelve years old, she became blind، أي أنها فقدت بصرها في سن الثانية عشرة تقريباً." },
+      { t: "tf", q: "Sabriye started Braille Without Borders together with another person.", a: true, x: "she and Paul Kronenberg co-founded Braille Without Borders ← شاركت في تأسيسها مع Paul Kronenberg." },
+      { t: "find", q: "Find a word in paragraph 2 that means 'become smaller'.", a: ["shrink"], x: "shrink = يتقلّص / يصغر: expected her ambitions to shrink." },
+      { t: "find", q: "Find a phrase in paragraph 4 that means 'impossible to get or achieve'.", a: ["out of reach"], x: "out of reach = بعيد المنال، لا يمكن الوصول إليه." },
+      { t: "open", q: "In the last paragraph, the writer says that other people's low expectations may have been a bigger obstacle than blindness. What does this mean? Do you agree? Give a reason.", m: "It means that when people believe blind people cannot study or work, they may not give them a chance, and this can hold them back more than blindness itself. I agree, because with the right tools, such as braille, blind people can do most things that sighted people can do.", x: "الاستنتاج هنا: نظرة المجتمع وتوقعاته المتدنية قد تمنع الكفيف من الفرص أكثر مما تمنعه الإعاقة نفسها." }
+    ]
+  },
+  writing: {
+    type: "A review",
+    ar: "مراجعة تقييمية (Review)",
+    about: "المراجعة نص قصير يصف فيه الكاتب مطعماً أو مقهى أو كتاباً أو فيلماً، ثم يقيّمه ويوصي القارئ به أو لا. هدفها مساعدة القارئ على اتخاذ قرار. تُكتب عادةً لمجلة أو موقع إلكتروني بأسلوب شبه رسمي جذّاب يخاطب القارئ مباشرة (you)، وتكثر فيها الصفات الحسية الدقيقة مثل fragrant, crispy, bland بدلاً من nice وgood. نستخدم المضارع البسيط لوصف المكان أو القصة، والماضي البسيط لرواية تجربتنا. الطول المعتاد 150–200 كلمة مع عنوان لافت. وفي مراجعة الكتاب أو الفيلم: لا تكشف النهاية!",
+    plan: [
+      { part: "Title", ar: "العنوان", tip: "عنوان قصير لافت يعطي فكرة عن رأيك، مثل: Small Café, Big Flavours أو A Gripping Read for Teens." },
+      { part: "Introduction", ar: "المقدمة", tip: "عرّف بالمكان أو العمل: الاسم، الموقع أو اسم الكاتب/المخرج، والنوع، ومتى زرته أو قرأته. اجذب القارئ بسؤال أو جملة تخاطبه مباشرة." },
+      { part: "Description", ar: "الوصف", tip: "صف أهم التفاصيل: الأجواء والطعام والخدمة والأسعار، أو المكان والشخصيات والفكرة العامة للقصة دون كشف النهاية. استخدم صفات حسية دقيقة ومتنوعة." },
+      { part: "Evaluation", ar: "التقييم", tip: "اذكر الإيجابيات والسلبيات بأمثلة محددة، واستخدم أدوات الربط مثل However, Although, What impressed me most was…" },
+      { part: "Recommendation", ar: "التوصية", tip: "احكم حكماً نهائياً: هل تنصح به؟ ولمن يناسب؟ يمكنك إضافة تقييم بالنجوم أو نصيحة عملية (مثل وقت الزيارة الأنسب)." }
+    ],
+    phrases: [
+      { en: "If you're looking for …, … is the place for you.", ar: "إذا كنت تبحث عن …، فهذا هو المكان المناسب لك.", use: "جذب القارئ في المقدمة" },
+      { en: "I recently visited / read / watched …", ar: "زرتُ / قرأتُ / شاهدتُ مؤخراً …", use: "التعريف بالتجربة" },
+      { en: "It is located in … / The story is set in …", ar: "يقع في … / تدور أحداث القصة في …", use: "المكان أو زمن القصة" },
+      { en: "The atmosphere is relaxed / lively / cosy.", ar: "الأجواء هادئة / حيوية / دافئة ومريحة.", use: "وصف الأجواء" },
+      { en: "The menu offers a wide range of …", ar: "تقدّم قائمة الطعام تشكيلة واسعة من …", use: "وصف الطعام" },
+      { en: "The plot is gripping and the characters are believable.", ar: "الحبكة مشوّقة والشخصيات مقنعة.", use: "وصف كتاب أو فيلم" },
+      { en: "What impressed me most was …", ar: "أكثر ما أعجبني كان …", use: "إبراز نقطة قوة" },
+      { en: "The highlight of the meal / the film was …", ar: "أجمل ما في الوجبة / الفيلم كان …", use: "إبراز أفضل جزء" },
+      { en: "The only downside is that …", ar: "العيب الوحيد هو أن …", use: "ذكر سلبية" },
+      { en: "…, which was a bit of a letdown.", ar: "…، وكان ذلك مخيّباً للآمال بعض الشيء.", use: "التعبير عن خيبة أمل بلطف" },
+      { en: "It is good value for money.", ar: "سعره مناسب لما يقدّمه.", use: "تقييم السعر" },
+      { en: "It's well worth visiting / reading / watching.", ar: "يستحق الزيارة / القراءة / المشاهدة فعلاً.", use: "التوصية (worth + V-ing)" },
+      { en: "I would highly recommend it to anyone who …", ar: "أنصح به بشدة لكل من …", use: "التوصية لفئة معينة" },
+      { en: "If you're not keen on …, you'd better …", ar: "إذا لم تكن من محبي …، فمن الأفضل أن …", use: "نصيحة عملية" },
+      { en: "Overall, I'd give it four stars out of five.", ar: "بشكل عام، أمنحه أربع نجوم من خمس.", use: "الحكم النهائي" }
+    ],
+    task: "Your school's English magazine is running a series called 'Where to Eat with Friends'. Write a review (150–200 words) of a restaurant or café you have been to. Give your review a title, describe the place, the food and the service, say what you liked and disliked, and say whether you would recommend it to other students.",
+    taskAr: "تنشر مجلة مدرستك الصادرة بالإنجليزية سلسلة بعنوان «أين تأكل مع أصدقائك». اكتب مراجعة لمطعم أو مقهى زرته: ضع عنواناً، وصف المكان والطعام والخدمة، واذكر ما أعجبك وما لم يعجبك، ثم وضّح هل تنصح الطلاب به ولماذا. (النموذج أدناه عن مقهى خيالي.)",
+    words: [150, 200],
+    model: [
+      "The Blue Lantern: Small Café, Big Flavours",
+      "If you're looking for a friendly place to relax after a week of studying, The Blue Lantern in Irbid might be just what you need. I visited it last Thursday with two classmates.",
+      "The café is small but cosy, with soft lights and the fragrant smell of cardamom coffee drifting from the kitchen. We shared a plate of grilled halloumi, and then I ordered a chicken wrap with garlic sauce, which was absolutely mouth-watering. My friend's lentil soup, however, was rather bland – a bit of a letdown.",
+      "What impressed me most was the service. Our waiter was friendly and patient, and he even remembered to bring extra bread without being asked. Most main dishes cost between three and five dinars, so it is good value for money. The only downside is that on busy evenings the music can be almost deafening.",
+      "Overall, The Blue Lantern is well worth visiting if you enjoy simple, tasty food. I'd recommend going early to avoid the crowds. I'd give it four stars out of five – and next time, I'm definitely going to try their spicy grilled chicken!"
+    ],
+    check: [
+      "هل للمراجعة عنوان لافت يعكس رأيك؟",
+      "هل عرّفت بالمكان أو العمل في المقدمة (الاسم، الموقع، متى زرته أو قرأته)؟",
+      "هل وصفت الطعام والأجواء والخدمة (أو القصة والشخصيات) بصفات دقيقة ومتنوعة بدلاً من nice وgood؟",
+      "هل ذكرت إيجابيات وسلبيات مع أمثلة محددة؟",
+      "هل ختمت بتوصية واضحة تحدد لمن يناسب المكان أو العمل؟",
+      "هل استخدمت المضارع للوصف والماضي لرواية تجربتك؟",
+      "هل استخدمت تراكيب الوحدة بشكل صحيح (worth visiting, I'd recommend going, remembered to bring)؟",
+      "هل عدد الكلمات بين 150 و200، وهل راجعت التهجئة وعلامات الترقيم؟"
+    ]
+  },
+  speaking: {
+    title: "Talking about preferences",
+    ar: "التعبير عن التفضيلات",
+    phrases: [
+      { en: "I'd rather … than …", ar: "أفضّل أن … على أن …", use: "تفضيل في موقف محدد — بعدها فعل مجرد دون to: I'd rather walk than drive." },
+      { en: "I'd rather not …", ar: "أفضّل ألّا …", use: "الرفض بلطف: I'd rather not eat so late." },
+      { en: "I prefer … to …", ar: "أفضّل … على …", use: "تفضيل عام — اسم أو V-ing بعد prefer وبعد to: I prefer cooking to washing up." },
+      { en: "I'd prefer to … rather than …", ar: "أفضّل أن … بدلاً من …", use: "تفضيل في موقف محدد" },
+      { en: "I'm really keen on …", ar: "أحبّ … كثيراً / أنا متحمّس لـ …", use: "إبداء الإعجاب (اسم أو V-ing)" },
+      { en: "I'm not very keen on …", ar: "لستُ من محبّي … كثيراً", use: "عدم التفضيل بلطف" },
+      { en: "If I had the choice, I'd …", ar: "لو كان الخيار بيدي لـ …", use: "تفضيل افتراضي" },
+      { en: "Given the choice, I'd go for …", ar: "لو خُيّرتُ لاخترتُ …", use: "الاختيار من بين بدائل" },
+      { en: "… isn't really my thing.", ar: "… ليس من الأشياء التي أحبها.", use: "عدم الاهتمام (غير رسمي)" },
+      { en: "I can't stand …", ar: "لا أطيق …", use: "كره شديد (اسم أو V-ing)" },
+      { en: "I don't mind. Either is fine with me.", ar: "لا مانع لديّ. أيٌّ منهما يناسبني.", use: "لا يوجد تفضيل" },
+      { en: "Would you rather … or …?", ar: "هل تفضّل … أم …؟", use: "السؤال عن التفضيل" },
+      { en: "Which do you prefer, … or …?", ar: "أيّهما تفضّل: … أم …؟", use: "السؤال عن التفضيل" },
+      { en: "It depends on …", ar: "يعتمد ذلك على …", use: "إجابة متوازنة" }
+    ],
+    dialogue: [
+      ["Dana", "So, for the charity day, would you rather organise a bake sale or a blindfold taste challenge?"],
+      ["Yazan", "Honestly, I prefer the taste challenge to the bake sale. Everyone does bake sales."],
+      ["Dana", "True, but I'm not very keen on blindfolds. Some people might feel uncomfortable wearing them."],
+      ["Yazan", "Fair point. If I had the choice, I'd let people decide whether to wear one or just close their eyes."],
+      ["Dana", "That sounds better. And for the tasting, I'd rather not use anything too spicy."],
+      ["Yazan", "Agreed. I'd prefer to keep it simple – lemon, dark chocolate, mint and a little za'atar."],
+      ["Dana", "Brilliant – sour, bitter, fresh and savoury. It's a lesson on the senses, too!"],
+      ["Yazan", "Exactly. And all the money will go to the centre for visually impaired children. Shall we suggest it to Ms Rana tomorrow?"],
+      ["Dana", "Definitely, though I'd rather present it together than on my own."],
+      ["Yazan", "Me too. Let's meet at break to plan what to say."]
+    ]
+  },
+  test: [
+    { t: "mcq", q: "The music at the wedding was so ____ that we couldn't hear each other at all.", o: ["muffled", "deafening", "fragrant", "blurred"], a: 1, k: "vocab", x: "deafening = يصمّ الآذان، ولذلك لم نسمع بعضنا. أما muffled فتعني صوتاً مكتوماً منخفضاً." },
+    { t: "mcq", q: "The soup has hardly any flavour. It's really ____.", o: ["spicy", "sour", "bitter", "bland"], a: 3, k: "vocab", x: "bland = بلا طعم تقريباً، وهو معنى hardly any flavour." },
+    { t: "mcq", q: "Our class held a bake sale to ____ money for a charity that helps blind children.", o: ["raise", "rise", "grow", "lift"], a: 0, k: "vocab", x: "raise money = يجمع المال/التبرعات. أما rise فعل لازم (يرتفع) لا يأخذ مفعولاً به." },
+    { t: "mcq", q: "The new library has audio books and braille books for ____ readers.", o: ["sighted", "deafening", "visually impaired", "bland"], a: 2, k: "vocab", x: "visually impaired = ضعاف البصر أو المكفوفون، وهم من يحتاجون إلى كتب برايل والكتب الصوتية." },
+    { t: "mcq", q: "Turn the heat down and let the beans ____ gently for half an hour.", o: ["chop", "simmer", "grill", "sniff"], a: 1, k: "vocab", x: "simmer = يطهو على نار هادئة، وتدلّ عليه Turn the heat down وgently." },
+    { t: "mcq", q: "I didn't mean to listen, but I ____ my neighbours talking about the new bakery.", o: ["overheard", "whispered", "stared", "glanced"], a: 0, k: "vocab", x: "overhear = يسمع حديث الآخرين مصادفةً دون قصد، ويؤكده I didn't mean to listen." },
+    { t: "mcq", q: "My grandmother made me ____ my hands before I touched the dough.", o: ["to wash", "washing", "wash", "washed"], a: 2, k: "g11u5-gr1", x: "make + مفعول + فعل مجرد بدون to في المبني للمعلوم: made me wash." },
+    { t: "mcq", q: "I'm not used to ____ such spicy food, so I'll have the mild dish.", o: ["eat", "eating", "eaten", "ate"], a: 1, k: "g11u5-gr1", x: "be used to = معتاد على، وto هنا حرف جر، لذلك يأتي بعدها V-ing: used to eating." },
+    { t: "tr", q: "I'd prefer to walk home rather than take a taxi.", p: "Rewrite starting with: I'd rather …", a: ["I'd rather walk home than take a taxi.", "I would rather walk home than take a taxi."], k: "g11u5-gr1", x: "would rather + فعل مجرد + than + فعل مجرد، دون to." },
+    { t: "err", q: "You had better to take an umbrella – it looks like rain.", w: "to", c: "take (You had better take …)", k: "g11u5-gr1", x: "had better ('d better) + فعل مجرد بدون to: You had better take an umbrella." },
+    { t: "mcq", q: "I'll never forget ____ the sunrise from the top of a mountain in Wadi Rum last spring.", o: ["to watch", "watching", "watch", "watched"], a: 1, k: "g11u5-gr2", x: "never forget + V-ing لذكرى حدثت في الماضي (نظرة إلى الوراء)." },
+    { t: "mcq", q: "Halfway through the film, my father stopped ____ a phone call, so we paused it.", o: ["answering", "to answer", "answer", "answered"], a: 1, k: "g11u5-gr2", x: "توقّف عن مشاهدة الفيلم لكي يردّ على المكالمة ← stop + to V (للغرض)." },
+    { t: "gap", q: "If you can't sleep, try ____ (drink) a glass of warm milk – it might help.", a: ["drinking"], k: "g11u5-gr2", x: "try + V-ing = جرّب هذا الحل لترى النتيجة، وتؤكد ذلك it might help." },
+    { t: "mcq", q: "I heard someone ____ my name, but when I turned round, nobody was there.", o: ["to call", "calls", "called", "calling"], a: 3, k: "g11u5-gr2", x: "hear + مفعول + V-ing (أو فعل مجرد) في المبني للمعلوم، ولا نستخدم to. الخيار الصحيح الوحيد هنا calling." },
+    { t: "err", q: "Please remember switching off the lights when you leave the classroom.", w: "switching", c: "to switch", k: "g11u5-gr2", x: "تذكير بواجب يجب القيام به لاحقاً ← remember + to V: remember to switch off." },
+    { t: "mcq", q: "Which sentence is correct?", o: ["I prefer tea than coffee.", "I'd rather to have tea.", "I prefer tea to coffee.", "I'd rather having tea."], a: 2, k: "speaking", x: "التركيب الصحيح: prefer X to Y. أما would rather فيأتي بعدها فعل مجرد: I'd rather have tea." },
+    { t: "mcq", q: "A: Shall we cook at home or eat out tonight? B: ____ I'm far too tired to cook.", o: ["I'm not keen on eating out.", "I'd rather eat out.", "I'd prefer to cook at home.", "I'd rather cooking."], a: 1, k: "speaking", x: "بما أنه متعب جداً فهو يفضّل الأكل في الخارج: I'd rather eat out (فعل مجرد بعد would rather)." },
+    { t: "mcq", q: "Read: 'As soon as Nour opened the front door, she sniffed the air, smiled and dropped her bag before hurrying to the kitchen.' What can we infer?", o: ["She smelt something she liked.", "She was angry with her family.", "Something in the kitchen was burning.", "She had a bad cold."], a: 0, k: "reading", x: "تشمّمت الهواء ثم ابتسمت وأسرعت إلى المطبخ ← نستنتج أنها شمّت رائحة طعام تحبه." },
+    { t: "mcq", q: "Read: 'Karim didn't even look at the menu. He just smiled at the waiter and said, “The usual, please.”' What can we infer about Karim?", o: ["He can't read.", "He is visiting the restaurant for the first time.", "He doesn't like the food there.", "He has eaten at this restaurant many times."], a: 3, k: "reading", x: "The usual تعني «طلبي المعتاد»، ولم يحتج إلى قراءة القائمة ← نستنتج أنه زبون دائم." },
+    { t: "mcq", q: "Which sentence belongs in the RECOMMENDATION part of a review?", o: ["The café opened two years ago.", "We ordered three dishes and a salad.", "If you love spicy food, this place is definitely worth a visit.", "The waiter was wearing a blue shirt."], a: 2, k: "writing", x: "التوصية تخبر القارئ هل يذهب ولمن يناسب المكان. الجمل الأخرى معلومات وصفية." }
+  ]
+});

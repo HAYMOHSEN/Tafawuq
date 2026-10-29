@@ -1,0 +1,17 @@
+{
+  "name": "tafawuq-english",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tafawuq — offline English study PWA for Jordanian Grade 11/12 students",
+  "scripts": {
+    "validate": "node tools/validate.js",
+    "build": "node tools/build.js",
+    "test": "node tools/build.js && node tools/validate.js && node tools/tests/grading.test.js && node tools/tests/print/stress.js && node tools/tests/e2e.js",
+    "test:print": "node tools/tests/print/stress.js && node tools/tests/e2e.js print",
+    "test:reader": "bash tools/tests/reader/run_all.sh",
+    "package": "node tools/package.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.50.0"
+  }
+}
